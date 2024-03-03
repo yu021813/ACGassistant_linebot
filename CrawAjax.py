@@ -38,7 +38,7 @@ class MongoDBManager:
 
 def run_scraper():
     scraper = GameNewsScraper()
-    mongo_manager = MongoDBManager("mongodb://mongo:NQ0l145OUe3yCT2n9kmSjrG8WMqw7o6h@hnd1.clusters.zeabur.com:31369", "MongoDB")
+    mongo_manager = MongoDBManager("mongodb://XXXXXX", "MongoDB")
 
     categories = {
         'all': "all",
