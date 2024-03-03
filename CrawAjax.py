@@ -23,13 +23,13 @@ class GameNewsScraper:
         return extracted_info
 
 class MongoDBManager:
-    def __init__(self, uri, db_name):
+    def __init__(self, uri, db_name): 
         self.client = MongoClient(uri)
-        self.db = self.client[db_name]
+        self.db = self.client[db_name] 
 
     def insert_data(self, data, collection_name):
         collection = self.db[collection_name]
-        collection.delete_many({})  # 注意：這會刪除集合中的所有資料
+        collection.delete_many({})  
         if data:
             collection.insert_many(data)  
 
@@ -38,8 +38,8 @@ class MongoDBManager:
 
 def run_scraper():
     scraper = GameNewsScraper()
-    mongo_manager = MongoDBManager("mongodb://XXXXXX", "MongoDB")
-
+    mongo_manager = MongoDBManager("mongodb://---------------------------------)
+    
     categories = {
         'all': "all",
         'game': "mobile",

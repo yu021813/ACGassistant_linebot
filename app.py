@@ -9,11 +9,10 @@ import random
 app = Flask(__name__)  
 
 # 設定Line Messaging API的存取權杖和配置
-configuration = Configuration(access_token='ＸＸＸＸＸＸ')# Configuration 用於設置驗證token(API向line發請求的身份驗證)
-handler = WebhookHandler('ＸＸＸＸＸＸ')  # 用於設置驗證secret(line向API發起webhook事件的驗證)
-
+configuration = Configuration(access_token='------------')# Configuration 用於設置驗證token(API向line發請求的身份驗證)
+handler = WebhookHandler('----------')  # 用於設置驗證secret(line向API發起webhook事件的驗證)
 # 連接資料庫/建立連結/選擇資料庫
-mongo_uri = "mongodb://ＸＸＸＸＸＸ" 
+mongo_uri = "mongodb://mongo:-----------" 
 client = MongoClient(mongo_uri)  
 db = client.MongoDB  
 
